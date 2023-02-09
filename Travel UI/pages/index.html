@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel UI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="../Assets/images/Mountain.png" />
+  <link rel="stylesheet" href="../Assets/style/style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar__logo">
+      <a href="#"><img src="../Assets/images/Logo.png" class="navbar__image" alt="logo"></a>
+    </div>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+    </label>
+    <ul class="navbar__menu">
+      <li class="navbar__list navbar__list--active">Home</li>
+      <li class="navbar__list">About Us</li>
+      <li class="navbar__list">Destinations</li>
+      <li class="navbar__list">Tours</li>
+      <li class="navbar__list">Blog</li>
+    </ul>
+    <div class="navbar__nav-button">
+      <button class="primary-button">Book Now <i class=" fa fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+    </section>
+  </nav>
+
+  <section class="hero-container">
+    <div class="hero-container__wrapper">
+      <h1 class="hero-container__heading">Discover the Best Lovely Places</h1>
+      <p class="hero-container__paragraph">Plan and book your perfect trip with expert advice, travel tips, destination
+        information and inspiration from us</p>
+    </div>
+    <div class="hero-container__nav-button">
+      <button class="primary-button">Book Now<i class=" fa fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+    <div class="hero-container__image">
+      <img src="../Assets/images/firstimage.png" alt="image" class="draw-image">
+    </div>
+  </section>
+
+  <section class="categories">
+    <div class="categories__container">
+      <h1 class="categories__heading">Categories</h1>
+      <p class="categories__paragraph">Here are lots of interesting destinations to visit, but don’t be confused—they’re
+        already grouped by category.</p>
+    </div>
+    <div class="categories__destination">
+      <div class="categories__images">
+        <img src="../Assets/images/Beach.png" alt="beach">
+      </div>
+      <div class="categories__images">
+        <img src="../Assets/images/Desert.png" alt="desert">
+      </div>
+      <div class="categories__images">
+        <img src="../Assets/images/Mountain.png" alt="mountain">
+      </div>
+      <div class="categories__images">
+        <img src="../Assets/images/Temple.png" alt="temple">
+      </div>
+      <div class="categories__images">
+        <img src="../Assets/images/Tower.png" alt="tower">
+      </div>
+      <div class="categories__images">
+        <img src="../Assets/images/Pyramid.png" alt="pyramid">
+      </div>
+    </div>
+  </section>
+
+  <!-- Find your Destination Card Starts -->
+  <article class="card-container">
+    <h1 class="card-container__heading">
+      <p>Find Popular Destinaton</p>
+      <div class="card-container__nav">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </h1>
+
+    <!-- First Card -->
+    <div class="card-container__content-card">
+      <div class=" card-container__card">
+        <figure class=" card-container__card-image">
+          <img src="../Assets/images/blog-1.png" alt="blog-image" class="blog-image">
+        </figure>
+        <figcaption class="card-container__card-content">
+          <p class="card-container-header"> Mountain Hiking Tour </p>
+
+          <p class="card-container-sub-header">Mountain Hiking Tour</p>
+        </figcaption>
+        <div class="card-container__card-footer">
+          <span class="price"> $89<p class="person">/Person</p> </span>
+          <button class="secondary-buttons" type="button">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Second card -->
+
+      <div class="card-container__card">
+        <figure class="card-container__card-image">
+          <img src="../Assets/images/Blog-2.png" alt="blog-image" class="blog-image">
+        </figure>
+        <figcaption class="card-container__card-content">
+          <p class="card-container-header"> Machu Picchu, Peru </p>
+
+          <p class="card-container-sub-header">Machu Picchu, Peru</p>
+        </figcaption>
+        <div class="card-container__card-footer">
+          <span class="price"> $99<p class="person">/Person</p> </span>
+          <button class="secondary-buttons" type="button">Book Now</button>
+        </div>
+      </div>
+
+      <!-- Third Card -->
+
+      <div class="card-container__card">
+        <figure class="card-container__card-image">
+          <img src="../Assets/images/Blog-3.png" alt="blog-image" class="blog-image">
+        </figure>
+        <figcaption class="card-container__card-content">
+          <p class="card-container-header"> The Grand Canyon, Arizona</p>
+
+          <p class="card-container-sub-header">Mountain Hiking Tour</p>
+        </figcaption>
+        <div class="card-container__card-footer">
+          <span class="price"> $99<p class="person">/Person</p> </span>
+          <button class="secondary-buttons" type="button">Book Now</button>
+        </div>
+      </div>
+
+      <!-- 4th Card -->
+
+      <div class="card-container__card">
+        <figure class="card-container__card-image">
+          <img src="../Assets/images/blog-1.png" alt="blog-image" class="blog-image">
+        </figure>
+        <figcaption class="card-container__card-content">
+          <p class="card-container-header"> The Grand Canyon, Arizona</p>
+
+          <p class="card-container-sub-header">Mountain Hiking Tour</p>
+        </figcaption>
+        <div class="card-container__card-footer">
+          <span class="price"> $99<p class="person">/Person</p> </span>
+          <button class="secondary-buttons" type="button">Book Now</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </article>
+
+  <article class="blog">
+    <h1 class="blog__heading">Top Destination</h1>
+    <h2 class="blog__sub-heading">Sost Brilliant reasons Entrada should be your one-stop-shop!</h2>
+    <div class="blog__buttons">
+      <button class="tertiary-buttons" type="button">London</button>
+      <button class="tertiary-buttons" type="button">England</button>
+      <button class="tertiary-buttons" type="button">Italy</button>
+    </div>
+    <div class="blog__destination">
+      <div class="blog__image">
+        <img src="../Assets/images/Card 01.png" alt="Vientam">
+      </div>
+      <div class="blog__image">
+        <img src="../Assets/images/Card 04.png" alt="Vientam">
+      </div>
+      <div class="blog__image">
+        <img src="../Assets/images/Card 01.png" alt="Vientam">
+      </div>
+      <div class="blog__wimage">
+        <img src="../Assets/images/Card 04.png" alt="Vientam">
+      </div>
+      <div class="blog__image">
+        <img src="../Assets/images/Card 06.png" alt="Vientam">
+      </div>
+      <div class="blog__image">
+        <img src="../Assets/images/Card 04.png" alt="Vientam">
+      </div>
+    </div>
+  </article>
+
+  <article class="feedback">
+    <div class="feedback__content">
+      <h1 class="feedback__heading">A customer said About us:</h1>
+      <div class="feedback__wrapper">
+        <p class="feedback__paragraph">Salty helped me a lot in finding the best place for our first outdoor adventure trip. They responded very
+          quickly and gave me a detailed account of the place—its history, as well as its best features.</p>
+        <div class="feedback__icons">
+        <i class="fa fa-solid fa-star"></i>
+        <i class="fa fa-solid fa-star"></i>
+        <i class="fa fa-solid fa-star"></i>
+        <i class="fa fa-solid fa-star"></i>
+        <i class="fa fa-solid fa-star"></i>
+        <p>Andrew Sarma</p>
+        <p class="feedback__paragraph">Enterpreneur</p>
+      </div>
+    </div>
+    </div>
+    <div class="feedback__image">
+      <img src="../Assets/images/last-image.png" alt="image" class="draw-image">
+    </div>
+  </article>
+
+  <section class="newsletter">
+    <h1 class="newsletter__heading">Sign up to our newsletter</h1>
+    <p class="newsletter__paragraph">Recieve latest news, update, and many other things every week. </p>
+    <div class="newsletter__text">
+      <div class="div">
+        <input type="text" placeholder="Enter your Email Address" class="newsletter__input">
+        <i class=" newsletter__icon fa fa-solid fa-paper-plane"></i>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <figure class="footer__logo">
+        <img src="../Assets/images/Logo.png" alt="salty-logo" class="salty-image">
+      </figure>
+      <figcaption class="footer__content">
+        <p class="footer__header-content"> The Grand Canyon, Arizona</p>
+        <div class="footer__links">
+          <a href="#" class="footer__links-social"><i class="fa fa-facebook-f social-icons"></i></a>
+          <a href="#" class="footer__links-social"><i class="fa fa-instagram social-icons"></i></a>
+          <a href="#" class="footer__links-social"><i class="fa fa-twitter social-icons"></i></a>
+        </div>
+    </div>
+    <div class="footer__resources footer__row">
+      <h4 class="footer__header">Resources</h4>
+      <ul class="footer__list">
+        <li><a class="footer__link" href="#">Download</a></li>
+        <li><a class="footer__link" href="#">Help Center</a></li>
+        <li><a class="footer__link" href="#">Guide Book</a></li>
+        <li><a class="footer__link" href="#">App Directory</a></li>
+      </ul>
+    </div>
+    <div class="footer__travellers footer__row">
+      <h4 class="footer__header">Travellers</h4>
+      <ul class="footer__list">
+        <li><a class="footer__link" href="#">Why Travellers</a></li>
+        <li><a class="footer__link" href="#">Enterprice</a></li>
+        <li><a class="footer__link" href="#">Customer Stories</a></li>
+        <li><a class="footer__link" href="#">Instagram Post</a></li>
+      </ul>
+    </div>
+    <div class="footer__company footer__row">
+      <h4 class="footer__header">Travellers</h4>
+      <ul class="footer__list">
+        <li><a class="footer__link" href="#">Travelling</a></li>
+        <li><a class="footer__link" href="#">About Locato</a></li>
+        <li><a class="footer__link" href="#">Success</a></li>
+        <li><a class="footer__link" href="#">information</a></li>
+      </ul>
+    </div>
+    <div class="footer__getapp footer__row">
+      <h4 class="footer__header">Get App</h4>
+      <ul class="footer__list">
+        <li><a class="footer__link" href="#">App Store</a></li>
+        <li><a class="footer__link" href="#">Google Play Store</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+<script src="../script/script.js"></script>
+
+</html>

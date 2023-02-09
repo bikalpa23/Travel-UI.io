@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #FAF8ED;
+}
+
+.hero-container {
+    font-family: 'Sen';
+    font-style: normal;
+}
+
+.blog {
+    font-family: 'Inter';
+    font-style: normal;
+
+}
+
+.feedback {
+    font-family: 'Inter';
+    font-style: normal;
+
+}
+
+.categories {
+    font-family: 'Inter';
+    font-style: normal;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    height: 50px;
+    padding: 16px;
+    background-color: #FAF8ED;
+    width: 100vw
+}
+
+.navbar__logo {
+    z-index: 2;
+}
+
+.hero-container__nav-button {
+    padding-top: 20px;
+
+}
+
+.navbar__list {
+    margin: 0 16px;
+    overflow: hidden;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* eitai css dherai lekhna na paroa vanera */
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    /* Color for Hamburger Menu */
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: "";
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: "";
+    margin-top: 8px;
+}
+
+/* container vitra ko first menu-button-container */
+#menu-toggle:checked+.menu-button-container {
+    position: fixed;
+    z-index: 2;
+    right: 10px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+/* menu toggle vitra ko sabai ma */
+#menu-toggle:checked~.navbar__menu {
+    background-color: #FAF8ED;
+    height: calc(100vh + 10px);
+    margin-top: -10px;
+    padding-top: 100px;
+    position: fixed;
+    z-index: 1;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+@media (max-width:992px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .navbar__menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* "~"  sibling haru selecet huna paryoo */
+    #menu-toggle~.navbar__menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.navbar__menu li {
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .navbar__list {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: black;
+    }
+}
+
+
+.hero-container__wrapper {
+    padding: 20px;
+
+}
+
+.hero-container__heading {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 50px;
+    letter-spacing: -1px;
+    padding: 50px 0 24px 0;
+}
+
+.hero-container__paragraph {
+    width: 100%;
+    height: 102px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 14px;
+    color: #5B5F62;
+}
+
+.draw-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding-top: 10px;
+}
+
+.navbar__nav-button {
+    display: none;
+}
+
+.primary-button {
+    color: #F66F4D;
+    padding: 13px 23px 12px 17px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 20px;
+    border: 2px solid #F66F4D;
+    background-color: #FAF8ED;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.categories__heading {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 50px;
+    letter-spacing: -1px;
+    padding: 50px 0 24px 12px;
+}
+
+.categories__paragraph {
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    padding: 0 0 24px 12px;
+    color: #5B5F62;
+}
+
+.categories__destination {
+    padding: 0 102px;
+}
+
+.card-container__heading {
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 50px;
+    letter-spacing: -1px;
+    padding: 50px 0 24px 12px;
+}
+
+.card-container__card {
+    margin: 6px;
+    padding: 10px 8px;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 24px 90px rgba(192, 188, 161, 0.22);
+    border-radius: 16px;
+}
+
+.card-container-sub-header {
+    font-size: 12px;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 20px;
+    display: flex;
+    padding-top: 20px;
+}
+
+.person {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.secondary-buttons {
+    border: 1px solid #3D3D3D;
+    background-color: #FAF8ED;
+    border-radius: 46px;
+    padding: 4px 14px 6px 14px;
+    margin-bottom: 5px;
+}
+
+.secondary-buttons:hover {
+    background-color: #2D3134;
+    color: white;
+}
+
+.card-container__card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.blog {
+    font-family: 'Inter';
+    font-style: normal;
+    padding: 16px 0 0 12px
+}
+
+.blog__heading {
+    font-weight: 600;
+    font-size: 46px;
+    padding: 0 0 16px 12px
+}
+
+.blog__sub-heading {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 0 16px 12px;
+    color: #5B5F62;
+}
+
+.tertiary-buttons {
+    margin: 0 0 10px 10px;
+    padding: 8px 32px;
+    border: 1px solid #3D3D3D;
+    border-radius: 30px;
+    background-color: #FAF8ED;
+}
+
+.tertiary-buttons:hover {
+    background-color: #2D3134;
+    color: white;
+}
+
+/* .blog__worefall {
+    width: 90%;
+    height: 20%;
+    object-fit: contain;
+}
+
+.blog__wore {
+    width: 92%;
+    height: auto;
+    object-fit: contain;
+} */
+
+.blog__destination {
+    padding: 20px 0 0 48px;
+}
+
+.feedback {
+    padding: 12px;
+}
+
+.feedback__image {
+    padding: 0 12px;
+}
+
+.feedback__wrapper {
+    margin: 6px;
+    padding: 10px 8px;
+    border: 2px solid #FFFFFF;
+    background-color: #FFFFFF;
+    color: #5B5F62;
+    border-radius: 16px;
+}
+
+.feedback__heading {
+    padding: 12px 0 0 12px;
+}
+
+.feedback__paragraph {
+    font-size: 12px;
+    color: #5B5F62;
+}
+
+.newsletter {
+    padding: 12px;
+    border: 2px solid #FFD482;
+    background-color: #FFD482;
+    border-radius: 16px;
+    margin: 0 12px;
+}
+
+.newsletter__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.newsletter__input {
+    font-size: 14px;
+    padding: 10px 41px 10px 4px;
+    border-radius: 12px;
+    border: 1px solid #FAF8ED;
+    outline: none;
+}
+
+.newsletter__icon:before {
+    position: relative;
+    top: 0;
+    right: 28px;
+}
+
+.newsletter__paragraph {
+    color: #5B5F62;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 50px 0 0 12px;
+    margin-top: auto;
+    font-size: 12px;
+}
+
+.footer__row {
+    padding: 12px;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #717082;
+}
+
+.footer__links {
+    padding: 20px 10px;
+}
+
+.footer__links-social {
+    padding: 8px 13px 10px 12px;
+    ;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.footer__links-social:hover {
+    color: #F66F4D;
+    border: 1px solid #F66F4D;
+}
+
+@media (min-width: 576px) {
+    .hero-container__paragraph {
+        margin-bottom: 0px;
+    }
+
+    .hero-container__nav-button {
+        padding-top: 6px;
+    }
+
+    .categories__destination {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 72px;
+    }
+
+    .card-container {
+        padding: 10px 14px;
+    }
+
+    .card-container__card {
+        margin: 16px;
+    }
+
+    .newsletter__heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tertiary-buttons {
+        margin: 0 0 10px 46px;
+        padding: 8px 33px;
+    }
+
+    .blog__destination {
+        padding: 20px 0 0 140px;
+    }
+
+    .navbar__nav-button {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-container__card {
+        margin: 34px;
+        padding: 10px 15px;
+    }
+
+    .card-container__heading {
+        padding-left: 46px;
+    }
+
+    .blog__destination {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 20px 0 0 2px;
+    }
+
+    .newsletter__paragraph {
+        text-align: center;
+    }
+
+    .navbar__nav-button {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar__menu {
+        display: flex;
+        color: #2E476B;
+        padding-right: 158px;
+    }
+
+    .navbar__list:hover {
+        border-bottom: #F66F4D 2px solid;
+    }
+
+    .navbar__list--active {
+        font-weight: 700;
+    }
+
+    .navbar__nav-button {
+        display: flex;
+    }
+
+    .categories__destination {
+        justify-content: space-evenly;
+        padding: 0 158px;
+    }
+
+    .hero-container__nav-button {
+        display: none;
+    }
+
+    .primary-button {
+        color: #F66F4D;
+        padding: 10px 23px 10px 17px;
+        margin: 6px 20px 0 0;
+    }
+
+    .card-container__content-card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-container__heading {
+        display: flex;
+    }
+
+    .card-container__nav {
+        font-size: 24px;
+        padding-left: 148px;
+        cursor: pointer;
+    }
+
+    .prev {
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 12px 27px 13px 21px;
+    }
+
+    .next {
+        border: 1px solid black;
+        border-radius: 50%;
+        padding: 12px 27px 13px 21px;
+    }
+
+    .prev:hover {
+        color: white;
+        background-color: #2D3134;
+    }
+
+    .next:hover {
+        color: white;
+        background-color: #2D3134;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-container {
+        display: flex;
+    }
+
+    .hero-container__image {
+        width: 981px;
+        height: 596px;
+        margin: 20px 20px 0 0;
+    }
+
+    .draw-image {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .hero-container__heading {
+        padding: 108px 0px 0px 75px;
+        font-weight: 700;
+        font-size: 84px;
+        line-height: 86px;
+    }
+
+    .hero-container__paragraph {
+        padding: 26px 42px 0px 77px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .categories__heading {
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 56px;
+    }
+
+    .categories__container {
+        padding: 0 0 12px 80px;
+    }
+
+    .categories__paragraph {
+        width: 370px;
+        height: 78px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .categories__destination {
+        justify-content: space-evenly;
+        padding: 0 30px;
+    }
+
+    .card-container__nav {
+        font-size: 24px;
+        padding-left: 366px;
+        cursor: pointer;
+    }
+
+    .blog__heading {
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 66px;
+    }
+
+    .blog__sub-heading {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .blog__heading {
+        padding-left: 379px;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 66px;
+    }
+
+    .blog__sub-heading {
+        padding-left: 290px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px
+    }
+
+    .blog__buttons {
+        padding-left: 336px;
+    }
+
+    .blog__destination {
+        padding: 20px 77px 0 78px;
+    }
+
+    .feedback {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .feedback__image {
+        width: 981px;
+        height: 596px;
+
+    }
+
+    .feedback__heading {
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 66px;
+        padding-right: 88px;
+    }
+
+    .feedback__paragraph {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #5B5F62;
+
+    }
+
+    .feedback__wrapper {
+        width: 537px;
+        height: 283px;
+    }
+
+    .feedback__icons {
+        margin-top: 20px;
+    }
+
+    .newsletter {
+        padding: 77px;
+        margin: 0 235px;
+    }
+
+    .newsletter__paragraph {
+        text-align: center;
+        padding: 8px 32px 10px 51px;
+    }
+
+    .newsletter__input {
+        padding: 12px 67px 10px 18px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .hero-container__image {
+
+        margin: 20px 330px 0 0;
+    }
+
+    .hero-container__heading {
+        padding: 142px 0px 0px 347px;
+    }
+
+    .hero-container__paragraph {
+        padding: 26px 142px 0px 350px;
+    }
+
+    .categories__container {
+        padding: 0 0 12px 354px;
+    }
+
+    .categories__destination {
+        padding: 0 405px;
+    }
+
+    .card-container__heading {
+        padding: 50px 0 24px 355px;
+    }
+
+    .card-container__card {
+        margin-left: 350px;
+    }
+
+    .blog {
+        padding: 16px 359px 0 331px;
+    }
+
+    .blog__sub-heading {
+        padding-left: 364px;
+    }
+
+    .feedback__content {
+        padding: 52px 118px 0 0;
+    }
+
+    .feedback__image {
+        padding: 20px 0 0 230px;
+    }
+    .newsletter {
+        padding: 48px;
+        margin: 24px 576px;
+    }
+    .footer {
+        padding: 50px 158px 0 177px; 
+    }
+}
